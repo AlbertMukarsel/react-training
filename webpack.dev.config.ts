@@ -29,11 +29,11 @@ module.exports = {
                 exclude: /node_modules/,
                 use: 'babel-loader',
             },
-            // {
-            //     test: /\.js$/,
-            //     enforce: 'pre',
-            //     use: ['source-map-loader'],
-            // },
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
