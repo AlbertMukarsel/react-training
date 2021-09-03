@@ -1,7 +1,7 @@
-import * as React from 'react';
+import React, { ReactElement } from 'react';
 import { Box, Image, Spacer } from '@chakra-ui/react';
 import { BrowserRouter, Link } from "react-router-dom";
-import Router from '../Router';
+import { Router } from '../Router';
 
 import styled from 'styled-components';
 
@@ -19,9 +19,8 @@ const Nav = styled.nav`
 const Logo = styled(Image)`
 `;
 
-const Navbar = () => {
+const Navbar = ():ReactElement => {
     return (
-        
         <BrowserRouter>
             <>
               <Nav>
@@ -29,7 +28,7 @@ const Navbar = () => {
                     <Logo src="" alt="logo" borderRadius="full" />
                 </Box>
                 <Box w="25%" d="flex" flexDirection="row" paddingEnd="0.8rem">
-                    <a href="">Home</a>
+                    <Link to="/">Home</Link>
                     <Spacer />
                     <a href="">File Scanning</a>
                     <Spacer />

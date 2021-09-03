@@ -1,10 +1,14 @@
 import * as React from 'react'
-import ParagraphComponent from '../ParagraphComponent'
-
+import { Container } from '@chakra-ui/react';
 
 function AboutPage() {
     return (
-        <ParagraphComponent />
+        <Container>
+            Welcome to the Virus Analyzer V1.0!
+            You can add any URL or small-sized files you might found suspicious
+            Hope this little app proves helpful to you, dear user!
+            Enjoy! 
+        </Container>
     )
 }
 
