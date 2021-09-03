@@ -4,7 +4,7 @@ import * as webpack from 'webpack';
 
 module.exports = {
     entry: {
-        app: path.resolve(__dirname, './src/index.js'),
+        app: path.resolve(__dirname, './src/index.tsx'),
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -19,16 +19,12 @@ module.exports = {
         open: false,
         historyApiFallback: true,
     },
+    devtool: "eval-source-map",
     resolve: {
         extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
     module: {
         rules: [
-            {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: 'babel-loader',
-            },
             {
                 test: /\.js$/,
                 enforce: 'pre',
