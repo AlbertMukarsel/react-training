@@ -1,6 +1,6 @@
-import * as path from 'path';
-import * as HtmlWebpackPlugin from 'html-webpack-plugin';
-import * as webpack from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import webpack from 'webpack';
 
 module.exports = {
     entry: {

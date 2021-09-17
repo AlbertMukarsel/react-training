@@ -1,13 +1,13 @@
-import * as React from 'react'
-import { Switch, Route } from 'react-router-dom'
-import AboutPage from './components/containers/AboutPage'
-import UrlFormComponent from './components/UrlFormComponent'
+import React, { ReactElement } from "react";
+import { Switch, Route } from "react-router-dom";
+import AboutPage from "./components/Pages/AboutPage";
+import { MainPage } from "./components/Pages/MainPage";
 
-export const Router = () => {
-    return (
-        <Switch>
-            <Route exact={true} path='/' component={UrlFormComponent} />
-            <Route path='/about' component={AboutPage} />
-        </Switch>
-    )
+export function Router(): ReactElement {
+  return (
+    <Switch>
+      <Route exact={true} path="/" component={MainPage} />
+      <Route path="/about" component={AboutPage} />
+    </Switch>
+  );
 }
